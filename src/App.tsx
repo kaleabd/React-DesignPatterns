@@ -12,13 +12,12 @@ import NumberedList from "./NumberedList";
 
 const App = () => {
   return (
-    <div className="">
+    <>
       <SplitScreen leftWeight={1} rightWeight={2}>
         <Left message="Hello" />
         <Right name="Kaleab!" />
       </SplitScreen>
       {/* LIST AND LIST ITEMS */}
-      
       {/* `<RegularList>` is rendering a list of items from the `people` array, where each item is
       represented by a `SmallPersonListItem` component. The `resourceName` prop is used to specify
       the name of the resource being listed (in this case, "person"). */}
@@ -50,7 +49,13 @@ const App = () => {
       resourceName="product"
       itemComponent={SmallProductListItem}
       />
-    </div>
+      <br />
+      <NumberedList
+      items={people}
+      resourceName="person"
+      itemComponent={SmallPersonListItem}
+      />
+    </>
   );
 };
 
