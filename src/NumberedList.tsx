@@ -12,13 +12,13 @@ interface product {
   rating: number;
 };
 
-interface RegularListProps {
+interface NumberedListProps {
   items: people[] | product[]; // Update the type to be an array of objects
   resourceName: string;
   itemComponent: React.ComponentType | any
 }
 
-const RegularList: React.FC<RegularListProps> = ({
+const NumberedList: React.FC<NumberedListProps> = ({
   items,
   resourceName,
   itemComponent: ItemComponent,
@@ -29,10 +29,13 @@ const RegularList: React.FC<RegularListProps> = ({
       creates a new instance of the `ItemComponent` and passes the `item` as a prop with the key of
       `resourceName`. The `key` prop is used to uniquely identify each item in the list. */}
       {items.map((item, i) => (
-        <ItemComponent key={i} {...{ [resourceName]: item }} />
+        <div className="">
+            <h2 className="font-bold">{i+1})</h2>
+            <ItemComponent key={i} {...{ [resourceName]: item }} />
+        </div>
       ))}
     </>
   );
 };
 
-export default RegularList;
+export default NumberedList;
