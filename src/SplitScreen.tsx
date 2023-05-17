@@ -10,7 +10,11 @@ interface SplitScreenProps {
     rightWeight = 1
     }) => {
 
-        const [left,right] = children;
+    /* `const [left, right] = children;` is destructuring the `children` array passed as a prop to the
+    `SplitScreen` component. It assigns the first element of the array to the `left` variable and
+    the second element to the `right` variable. This assumes that the `children` array always has
+    two elements. */
+    const [left,right] = children;
     return (
       <div className="flex items-center">
         <div className={`flex-${leftWeight} bg-red-500`}>
