@@ -1,9 +1,14 @@
+import SplitScreen from "./SplitScreen"
+import Right from "./components/Right"
+import Left from "./components/Left"
+
 const App = () => {
   return (
     <div>
-      <h1 className="bg-red-600 underline">
-        Hello world!
-      </h1>
+      <SplitScreen leftWeight = {1} rightWeight={3}>
+        <Left message="Hello "/>
+        <Right name="Kaleab!"/>  
+      </SplitScreen>
     </div>
   )
 }
