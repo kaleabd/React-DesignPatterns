@@ -16,11 +16,11 @@ interface SplitScreenProps {
     two elements. */
     const [left,right] = children;
     return (
-      <div className="flex items-center">
-        <div className={`flex-${leftWeight} bg-red-500`}>
+      <div className="grid grid-cols-3 gap-4">
+        <div className={`col-span-${leftWeight} bg-red-500`}>
           {left}
         </div>
-        <div className={`flex-${rightWeight} bg-green-500`}>
+        <div className={`col-span-${rightWeight} bg-green-500`}>
           {right}
         </div>
       </div>

@@ -9,6 +9,7 @@ import { products } from "./assets/products";
 import SmallProductListItem from "./product/SmallProductItem";
 import LargeProductListItem from "./product/LargeProductItem";
 import NumberedList from "./NumberedList";
+import Modal from "./Modal";
 
 const App = () => {
   return (
@@ -50,11 +51,9 @@ const App = () => {
       itemComponent={SmallProductListItem}
       />
       <br />
-      <NumberedList
-      items={people}
-      resourceName="person"
-      itemComponent={SmallPersonListItem}
-      />
+      <Modal>
+        <LargeProductListItem product={products[0]}/>
+      </Modal>
     </>
   );
 };
