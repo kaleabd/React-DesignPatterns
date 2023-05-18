@@ -16,7 +16,7 @@ interface SplitScreenProps {
     two elements. */
     const [left,right] = children;
     return (
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4 w-full">
         <div className={`col-span-${leftWeight} bg-red-500`}>
           {left}
         </div>

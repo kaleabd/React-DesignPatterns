@@ -54,6 +54,8 @@ const App = () => {
       <Modal>
         <LargeProductListItem product={products[0]}/>
       </Modal>
+      <br />
+      <br />
     </>
   );
 };
