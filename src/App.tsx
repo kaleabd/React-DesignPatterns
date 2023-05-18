@@ -10,6 +10,8 @@ import SmallProductListItem from "./product/SmallProductItem";
 import LargeProductListItem from "./product/LargeProductItem";
 import NumberedList from "./NumberedList";
 import Modal from "./Modal";
+import CurrentUserLoader from "./Container-component/CurrentUserLoader";
+import UserInfo from "./Container-component/UserInfo";
 
 const App = () => {
   return (
@@ -54,6 +56,11 @@ const App = () => {
       <Modal>
         <LargeProductListItem product={products[0]}/>
       </Modal>
+      <br />
+      <br />
+      <CurrentUserLoader>
+        <UserInfo/>
+      </CurrentUserLoader>
       <br />
       <br />
     </>

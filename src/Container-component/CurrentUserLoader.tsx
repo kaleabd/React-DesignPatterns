@@ -17,12 +17,18 @@ const CurrentUserLoader: React.FC<CurrentProps> = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('/current-user');
-      const currentUser: UserProps = response.data;
-      setUser(currentUser);
+      try{
+        const response = await axios.get('http://localhost:8080/current-user');
+        const currentUser: UserProps = response.data;
+        setUser(currentUser);
+        console.log(currentUser)
+      } catch (error) {
+        console.log('error while fetching data: ',error)
+      }
+      
     })();
   }, []);
-
+  
   return (
     <>
       {/* This code is mapping over the `children` prop passed to the `CurrentUserLoader` component and
