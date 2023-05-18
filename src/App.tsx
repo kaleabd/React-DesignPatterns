@@ -58,6 +58,9 @@ const App = () => {
       </Modal>
       <br />
       <br />
+      {/* `<CurrentUserLoader>` is a higher-order component that loads the current user's information
+      and passes it down to its child components as props. In this case, the child component is
+      `<UserInfo/>`, which likely displays information about the current user. */}
       <CurrentUserLoader>
         <UserInfo/>
       </CurrentUserLoader>
