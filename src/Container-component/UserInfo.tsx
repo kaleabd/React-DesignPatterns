@@ -1,3 +1,8 @@
+/* This is a TypeScript React component that displays information about a user. It takes in a `user`
+object as a prop, which includes the user's name, age, eye color, and hobbies. The component then
+renders this information in a formatted way using JSX. If the `user` prop is not provided, the
+component displays a "Loading..." message. */
+
 import React from "react";
 
 interface UserInfoProps {
