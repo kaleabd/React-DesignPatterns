@@ -1,0 +1,9 @@
+React Design Patterns - Layout Components
+
+Layout Components in React refer to a specific category of components that are primarily responsible for organizing and arranging other components on a web page. These components facilitate the construction of split screens, list items, modals, and various other UI elements.
+
+The core concept behind employing layout components is to ensure that our components remain agnostic to their specific placement or display location. In other words, layout components shield the child components from having any knowledge or dependency on their surrounding context.
+
+By separating the layout-related concerns into dedicated components, we can achieve greater flexibility and maintainability in our React applications. This modular approach allows for easier modifications and reusability of components, as they can be seamlessly rearranged or integrated into different sections of the user interface without impacting their core functionality.
+
+In summary, the utilization of layout components in React design patterns empowers developers to create dynamic and adaptable user interfaces, where components can be effortlessly organized and positioned without compromising their internal logic or structure.
