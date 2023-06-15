@@ -1,4 +1,3 @@
-import React from 'react'
 import SplitScreen from './Layout-Components/Split-Screen/SplitScreen'
 
 const RightHandComponent = () => {
