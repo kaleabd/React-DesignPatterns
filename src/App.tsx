@@ -14,7 +14,9 @@ const App = () => {
     <div>
       <SplitScreen 
         left={LeftHandComponent}
+        leftColor='bg-blue-400'
         right={RightHandComponent}
+        rightColor='bg-green-400'
       />
     </div>
   )
