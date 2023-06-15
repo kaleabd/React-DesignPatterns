@@ -11,12 +11,19 @@ const LeftHandComponent = () => {
 const App = () => {
   return (
     <div>
-      <SplitScreen 
+{/* The code is rendering a component called `SplitScreen` with two child components,
+`LeftHandComponent` and `RightHandComponent`. The `leftColor` and `rightColor` props are setting the
+background color of the left and right components respectively. */}
+      {/* <SplitScreen 
         left={LeftHandComponent}
         leftColor='bg-blue-400'
         right={RightHandComponent}
         rightColor='bg-green-400'
-      />
+      /> */}
+        <SplitScreen leftColor='bg-blue-400'  rightColor='bg-green-400'>
+          <LeftHandComponent />
+          <RightHandComponent />
+        </SplitScreen>
     </div>
   )
 }

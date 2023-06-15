@@ -1,22 +1,24 @@
-import React from "react"
+import React from "react";
 
 type SplitScreenProps = {
-  left: React.ComponentType
-  right: React.ComponentType
-  leftColor: string
-  rightColor: string
-}
-const SplitScreen: React.FC<SplitScreenProps> = ({left: Left, right: Right, leftColor: LeftColor, rightColor: RightColor}) => {
+  children: React.ReactNode;
+  leftColor: string;
+  rightColor: string;
+};
+
+const SplitScreen: React.FC<SplitScreenProps> = ({
+  children,
+  leftColor,
+  rightColor,
+}) => {
+  const [left, right] = React.Children.toArray(children);
+
   return (
     <div className="flex">
-      <div className={`${LeftColor} flex-1`}>
-        <Left />
-      </div>
-      <div className={`${RightColor} flex-1`}>
-        <Right />
-      </div>
+      <div className={`${leftColor} flex-1`}>{left}</div>
+      <div className={`${rightColor} flex-1`}>{right}</div>
     </div>
-  )
-}
+  );
+};
 
-export default SplitScreen
+export default SplitScreen;
