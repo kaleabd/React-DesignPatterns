@@ -18,7 +18,7 @@ const SplitScreen: React.FC<SplitScreenProps> = ({
       <div className={`${leftColor} flex-1`}>{left}</div>
       <div className={`${rightColor} flex-1`}>{right}</div>
     </div>
-  );
+  ) ;
 };
 
 export default SplitScreen;

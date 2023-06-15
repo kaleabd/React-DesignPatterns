@@ -1,11 +1,12 @@
 import SplitScreen from './Layout-Components/Split-Screen/SplitScreen'
 
-const RightHandComponent = () => {
-  return <h1>Right hand!</h1>
-}
+const RightHandComponent: React.FC<{ message: string }> = ({ message }) => {
+  return <h1>{message}</h1>;
+};
 
-const LeftHandComponent = () => {
-  return <h1>Left hand!</h1>
+
+const LeftHandComponent: React.FC<{ userName: string }> = ({userName}) => {
+  return <h1>{userName}</h1>
 }
 
 const App = () => {
@@ -21,8 +22,8 @@ background color of the left and right components respectively. */}
         rightColor='bg-green-400'
       /> */}
         <SplitScreen leftColor='bg-blue-400'  rightColor='bg-green-400'>
-          <LeftHandComponent />
-          <RightHandComponent />
+          <LeftHandComponent userName='kaleab'/>
+          <RightHandComponent message="hello world!"/>
         </SplitScreen>
     </div>
   )
