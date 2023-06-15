@@ -1,8 +1,11 @@
 import RegularList from "./Layout-Components/Lists_and_ListItems/RegularList";
 import LargePersonListItem from "./Layout-Components/Lists_and_ListItems/people/LargePersonListItem";
 import SmallPersonListItem from "./Layout-Components/Lists_and_ListItems/people/SmallPersonListItem";
+import LargeProductListItem from "./Layout-Components/Lists_and_ListItems/products/LargeProductListItem";
+import SmallProductListItem from "./Layout-Components/Lists_and_ListItems/products/SmallProductListItem";
 import SplitScreen from "./Layout-Components/Split_Screen/SplitScreen";
 import { people } from "./assets/people";
+import { products } from "./assets/products";
 
 const RightHandComponent: React.FC<{ message: string }> = ({ message }) => {
   return <h1>{message}</h1>;
@@ -47,6 +50,10 @@ const App = () => {
         itemComponent={LargePersonListItem}
       />
 
+      <SmallProductListItem product={products[0]} />
+      <LargeProductListItem product={products[1]} />
+
+      
     </div>
   );
 };
