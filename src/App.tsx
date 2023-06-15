@@ -1,3 +1,4 @@
+import RegularList from "./Layout-Components/Lists_and_ListItems/RegularList";
 import LargePersonListItem from "./Layout-Components/Lists_and_ListItems/people/LargePersonListItem";
 import SmallPersonListItem from "./Layout-Components/Lists_and_ListItems/people/SmallPersonListItem";
 import SplitScreen from "./Layout-Components/Split_Screen/SplitScreen";
@@ -33,6 +34,18 @@ const App = () => {
 
       <SmallPersonListItem person={people[2]}/>
       <LargePersonListItem person={people[0]}/>
+
+      <RegularList
+        items={people}
+        resourceName="person"
+        itemComponent={SmallPersonListItem}
+      />
+      
+      <RegularList
+        items={people}
+        resourceName="person"
+        itemComponent={LargePersonListItem}
+      />
 
     </div>
   );

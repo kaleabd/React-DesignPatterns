@@ -1,6 +1,6 @@
 import React from 'react'
 
-type smallListProps = {
+export type smallListProps = {
   person : {
     name: string
     age: number

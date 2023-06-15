@@ -1,6 +1,6 @@
 import React from 'react'
 
-type ListProps = {
+export type ListProps = {
     person: {
         name: string
         age: number
