@@ -1,4 +1,4 @@
-import SplitScreen from "./Layout-Components/Split-Screen/SplitScreen";
+import SplitScreen from "./Layout-Components/Split_Screen/SplitScreen";
 
 const RightHandComponent: React.FC<{ message: string }> = ({ message }) => {
   return <h1>{message}</h1>;
