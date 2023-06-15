@@ -1,4 +1,7 @@
+import LargePersonListItem from "./Layout-Components/Lists_and_ListItems/people/LargePersonListItem";
+import SmallPersonListItem from "./Layout-Components/Lists_and_ListItems/people/SmallPersonListItem";
 import SplitScreen from "./Layout-Components/Split_Screen/SplitScreen";
+import { people } from "./assets/people";
 
 const RightHandComponent: React.FC<{ message: string }> = ({ message }) => {
   return <h1>{message}</h1>;
@@ -25,6 +28,12 @@ const App = () => {
         <LeftHandComponent userName="kaleab" />
         <RightHandComponent message="hello world!" />
       </SplitScreen>
+
+      {/* Lists and List Items */}
+
+      <SmallPersonListItem person={people[2]}/>
+      <LargePersonListItem person={people[0]}/>
+
     </div>
   );
 };
